@@ -2,17 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test Landing Page</title>
+  <title>Amber Morales | Graphic Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 2rem auto;
-      max-width: 700px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
       line-height: 1.6;
-      padding: 0 1rem;
     }
-    h1 { color: #2c3e50; }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      opacity: 0.9;
+    }
+    nav {
+      background: #34495e;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .portfolio img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
     form {
       display: grid;
       gap: 1rem;
@@ -23,12 +73,11 @@
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
-      width: 100%;
     }
     button {
       padding: 0.6rem 1rem;
       background: #3498db;
-      color: white;
+      color: #fff;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -36,37 +85,55 @@
     button:hover {
       background: #2980b9;
     }
-    .notice {
-      margin-top: 1rem;
-      padding: 0.6rem;
-      background: #f1f1f1;
-      border-radius: 6px;
-    }
   </style>
 </head>
 <body>
-  <h1>Test Landing Page</h1>
-  <p>If you can see this page, your hosting setup is working.</p>
 
-  <h2>Contact Form (Test Only)</h2>
-  <form method="post" action="#">
-    <label>
-      Name:
-      <input type="text" name="name" placeholder="Your name">
-    </label>
-    <label>
-      Email:
-      <input type="email" name="email" placeholder="your@email.com">
-    </label>
-    <label>
-      Message:
-      <textarea name="message" rows="5" placeholder="Type a message..."></textarea>
-    </label>
-    <button type="submit">Submit</button>
-  </form>
+  <header>
+    <h1>Amber Morales</h1>
+    <p>Graphic Designer | Creative Branding | Digital & Print Design</p>
+  </header>
 
-  <div class="notice">
-    <strong>Note:</strong> This is just a static test page. The form won’t send data unless you hook it up to a backend.
-  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m <strong>Amber Morales</strong>, a graphic designer passionate about creating
+      bold visuals that help brands stand out. I specialize in logo design, branding,
+      social media graphics, and print design. With a focus on clean aesthetics and
+      modern trends, I work with clients to bring their vision to life.
+    </p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Here are a few sample works (replace with real images):</p>
+    <div class="portfolio">
+      <img src="https://via.placeholder.com/600x400.png?text=Logo+Design+Sample" alt="Logo Sample">
+      <img src="https://via.placeholder.com/600x400.png?text=Branding+Mockup" alt="Branding Sample">
+      <img src="https://via.placeholder.com/600x400.png?text=Poster+Design" alt="Poster Sample">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Interested in working together? Fill out the form below or email me directly at <a href="mailto:amber@example.com">amber@example.com</a>.</p>
+    <form method="post" action="#">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Amber Morales. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
